@@ -1,0 +1,10 @@
+(define (remove_atom lst atom)
+  (if (null? lst)
+      '()
+      (cond
+        ((list? (car (lst))) (remove_atom (car lst) atom))
+        ((not ((car lst) atom =)) (cons (car lst) (cdr lst))))))
+        
+        
+
+(remove_atom '(a b c d e f g h i j k l m n o p) '(a))

@@ -1,0 +1,9 @@
+(define (abslist lst)
+  (if (null? lst)
+      '()
+      (cons (abs (car lst)) (abslist (cdr lst)))
+  )
+)
+
+
+(abslist '(-1 -9 8 23 29 -90 -21 87 -4))
